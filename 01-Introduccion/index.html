@@ -20,7 +20,34 @@
     </header>
 
     <section class="seccion">
+        <!-- Hay 6 contenedores -->
+        <!-- Los contenedores permiten centrar el contenido horizontalmente -->
         <h1 class="text-center my-5 heading">Contenedores</h1>
+
+        <!-- Container responsive. Centra el contenido. Da un ancho definido por medio de CSS
+            y coloca un margin a la izquierda y a la derecha para centrarlo -->
+        <div class="container">Contenido</div>
+
+        <!-- Los nuevos container. Evitan los saltos que da container al cambiar el max-width al 
+            hacer el navegador más pequeño o más grande. Los hace fluid. -->
+        <!-- Utiliza media queries. Son los siguientes tamaños: 
+                Extra chico  -  xs  - Menor a 576px    (enfoque desktop-first)
+                Chico        -  sm  - Mayor a 576px    (enfoque mobile first a partir de este)
+                Mediano      -  md  - Mayor a 768px
+                Grande       -  lg  - Mayor a 992px
+                Extra grande -  xl  - Mayor a 1200px    (quizá el mejor)
+                XXL grande   -  xxl - Mayor a 1400px
+            Esta nomenclatura de uso de media queries aplica a muchos elementos como columnas,
+            botones, alineación, containers...
+        -->
+        <div class="container-sm">Contenido</div>
+        <div class="container-md">Contenido</div>
+        <div class="container-lg">Contenido</div>
+        <div class="container-xl">Contenido</div>
+        <div class="container-xxl">Contenido</div>
+
+        <!-- Container responsive. Toma todo el espacio disponible -->
+        <div class="container-fluid">Contenido</div>
 
     </section>
 
