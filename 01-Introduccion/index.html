@@ -52,7 +52,51 @@
     </section>
 
     <section class="seccion">
+        <!-- Bootstrap es un framework enfocado en la creación de sitios Responsive y Mobile First.
+            También cuenta con un Grid basado en FlexBox para poder crear cualquier diseño. -->
+        <!-- Las columnas inician con la palabra col- seguido de un valor opcional que es el 
+            tamaño de un media query y finalmente la cantidad de columnas. Ejemplos:
+            col-6 o col-md-6 -->
+        <!-- Por defecto son 12 columnas, pero puede cambiarse con SASS -->
+        <!-- Se pueden añadir más de 12 columnas, pero lo que hace es ponerlas debajo,
+            en nuevas filas. -->
         <h1 class="text-center my-5 heading">Grid</h1>
+
+        <!-- Para usar un grid lo primero que hay que hacer es declarar un container y un row -->
+        <div class="container-xl">
+            <div class="row">
+                <!-- A partir de 768px asigna las columnas, pero por debajo no, lo coloca
+                    uno arriba del otro (responsive y mobile first) -->
+                <div class="col-md-8">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore tenetur obcaecati molestiae, optio sint sed quibusdam rem temporibus quis tempora, consequatur cum, fuga illo delectus praesentium dolore quae. Deserunt, nam?
+                </div>
+                <!-- En el mismo row no es conveniente mezclar distintos media queries.
+                    Si ponemos md, entonces para ese row, salvo casos excepcionales,
+                    ponerlo siempre md -->
+                <div class="col-md-4">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, sint voluptatum explicabo culpa vel fuga recusandae et, pariatur illum quisquam dolores amet non quaerat nulla temporibus tempora enim soluta eos.
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Se pueden añadir más clases de columnas.
+                Sirve como ejemplo de caso excepcional de mezclar md y sm -->
+            <!-- En un dispositivo grande tenemos las 3 columnas iguales, pero en uno pequeño
+                el primer col toma todo el ancho disponible y los otros dos col se reparten
+                el espacio de la siguiente fila -->
+            <div class="row">
+                <div class="col-md-4">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore tenetur obcaecati molestiae, optio sint sed quibusdam rem temporibus quis tempora, consequatur cum, fuga illo delectus praesentium dolore quae. Deserunt, nam?
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, sint voluptatum explicabo culpa vel fuga recusandae et, pariatur illum quisquam dolores amet non quaerat nulla temporibus tempora enim soluta eos.
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque sunt reprehenderit molestias, odio facilis deleniti quod mollitia fugit dicta? Ab ipsam nemo rerum incidunt amet provident accusantium magnam deserunt ducimus!
+                </div>                
+            </div>            
+        </div>
 
     </section>
 
