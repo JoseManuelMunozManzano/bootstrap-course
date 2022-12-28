@@ -359,7 +359,24 @@
 
         <!-- Se pueden mezclar con los botones. En vez de usar la clase btn-lg para
             hacer el botón más grande, el mismo efecto se puede obtener con un padding -->
-        <button type="button" class="btn btn-warning px-5 py-4">Comprobar</button>
+        <button type="button" class="btn btn-warning px-5 py-4 mb-3">Comprobar</button>
+
+        <!-- OTRA FORMA DE AGREGAR SEPARACIÓN -->
+        <!-- Se usa la clase d-grid para añadir un display de grid, donde existe algo
+            llamado gap. Se puede usar gap- y un número del 1 al 5 -->
+        <div class="d-grid gap-4">        
+            <div class="container-xl">
+                <div class="bg-success p-3 text-white ">
+                    Ejemplo de padding
+                </div>
+            </div>
+
+            <div class="container-xl">
+                <div class="bg-danger p-2 text-white">
+                    Ejemplo de margin
+                </div>
+            </div>
+        </div>
 
     </section>
 
