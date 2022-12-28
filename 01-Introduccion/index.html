@@ -209,8 +209,26 @@
     </section>
 
     <section class="seccion">
+        <!-- Con una sola clase es posible hacer una imagen responsive (img-fluid) -->
+        <!-- También existen clases para alinear imágenes, distribuirlas en un 
+            contenedor, o agregarles un efecto -->
         <h1 class="text-center my-5 heading">Imágenes</h1>
 
+        <img class="img-fluid" src="img/curso_1.jpg" alt="imagen curso">
+
+        <!-- Gracias a la clase img-fluid la imagen se adaptar en el contenedor -->
+        <!-- En el ejemplo se va a adaptar a las 3 columnas que tenemos y es responsive -->
+        <div class="container-xl">
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="img-fluid" src="img/curso_1.jpg" alt="imagen curso">
+                </div>
+            </div>
+        </div>
+
+        <!-- Hay otras clases que se pueden utilizar, como img-thumbnail, que le añade un
+            borde -->
+        <img class="img-thumbnail" src="img/curso_1.jpg" alt="imagen curso">
         
     </section>
 
