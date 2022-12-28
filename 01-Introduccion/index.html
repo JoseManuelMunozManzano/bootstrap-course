@@ -312,7 +312,54 @@
     </section>
 
     <section class="seccion">
+        <!-- Bootstrap contiene una gran cantidad de clases para añadir margin y padding
+            en cualquier dirección y de diferentes tamaños. -->
+        <!-- Estas clases tienen una sintaxis especial. -->
+        <!-- Todas las clases de padding inician con p y las de margin inician con m -->
+        <!-- Luego es OPCIONAL añadir una dirección:
+            t -> top
+            b -> bottom
+            e -> end (padding/margin lado derecho)
+            s -> start (padding/margin lado izquierdo)
+        -->
+        <!-- La versión corta del padding/margin es:
+            x -> padding/margin de izquierda y derecha
+            y -> padding/margin de arriba y abajo
+        -->
+        <!-- Si no se indica letra le hace padding/margin en todas las direcciones -->
+        <!-- Después se añade un guión -->
+        <!-- Se indica un número que puede ir del 1 al 5. A mayor número, mayor
+            padding/margin -->
+        <!-- Para centrar un div, se suele utilizar el CSS:
+            margin: left auto right auto
+            Entonces, para emularlo con Bootstrap, se usa, solo con margin, la palabra auto:
+            m-auto
+            mx-auto
+            ...
+         -->
         <h1 class="text-center my-5 heading">Margins y Paddings</h1>
+        
+        <div class="container-xl">
+            <!-- Un padding 1 son .25rem, padding 2 son .5rem,
+                padding 3 es 1rem, padding 4 es 1.5rem y padding 5 es 3rem -->
+            <div class="bg-success p-3 text-white ">
+                Ejemplo de padding
+            </div>
+        </div>
+
+        <div class="container-xl">
+            <div class="bg-danger p-2 text-white mt-3">
+                Ejemplo de margin
+            </div>
+        </div>
+
+        <!-- Los display inline no soportan margin auto, pero si se cambia el display a block
+            usando la clase d-block y se indica un width, si funciona -->
+        <a href="#" class="mx-auto d-block" style="width:10rem">Enlace</a>
+
+        <!-- Se pueden mezclar con los botones. En vez de usar la clase btn-lg para
+            hacer el botón más grande, el mismo efecto se puede obtener con un padding -->
+        <button type="button" class="btn btn-warning px-5 py-4">Comprobar</button>
 
     </section>
 
