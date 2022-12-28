@@ -8,9 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/app.css">
+
+    <!-- Usando CDN para tener acceso a los iconos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 
@@ -277,6 +281,33 @@
 
         <!-- Con el atributo disabled el botón queda deshabilitado -->
         <button type="button" class="btn btn-dark" disabled>Comprobar</button>
+
+        <br><br>
+
+        <!-- ICONOS -->
+
+        <!-- Bootstrap lanzó sus propios iconos y se integran muy bien con cualquier
+            elemento de Bootstrap. Se pueden usar incluso sin Bootstrap -->
+        <!-- No vienen incluidos con Bootstrap, así que hay que instalarlos -->
+        <!-- Se instalan igual que Bootstrap, es decir, con npm, descargándolos
+            o usando un CDN -->
+        <!-- https://icons.getbootstrap.com/ -->
+
+        <!-- Para añadir iconos a los botones -->
+        <button type="button" class="btn btn-primary">Agregar <i class="bi bi-person-plus-fill"></i></button>
+
+        <!-- Para añadir iconos a inputs, en principio no es posible, hay que cambiar
+            el input a un botón de tipo submit -->
+        <button type="submit" class="btn btn-primary">Enviar Formulario <i class="bi bi-alarm"></i></button>
+
+        <!-- En los enlaces se puede usar sin problema -->
+        <a href="#" class="btn btn-outline-primary">Enlace <i class="bi bi-google-play"></i></a>
+
+        <br><br>
+
+        <!-- Un reto. Crear un botón que tenga el texto eliminar y dentro un icono que haga
+            referencia a eliminar. -->
+        <button type="button" class="btn btn-danger">Eliminar <i class="bi bi-trash"></i></button>
 
     </section>
 
