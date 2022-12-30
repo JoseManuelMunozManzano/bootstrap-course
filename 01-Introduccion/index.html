@@ -508,7 +508,46 @@
     </section>
 
     <section class="seccion">
+        <!-- Con Bootstrap se puede conseguir un formulario profesional muy rápidamente -->
         <h1 class="text-center my-5 heading">Formularios</h1>
+
+        <div class="container-xl">
+            <!-- Para que centre el contenido se usa d-flex y justify-content-center -->
+            <!-- Quitar esas dos clases para ver la diferencia -->
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6">
+                    <!-- To-dos los formularios deben tener la etiqueta form -->
+                    <!-- Y luego podemos ir viendo las distintas clases de Bootstrap -->
+                    <form>
+                        <legend><i class="bi bi-person-plus-fill"></i> Nuevo Cliente</legend>
+                        <!-- Para separar entre distintos grupos de label-input -->
+                        <div class="mb-3">
+                            <!-- form-label no cambia mucho la apariencia, pero agrega
+                                un margin entre el label y su input -->
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input id="nombre" type="text" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="empresa" class="form-label">Empresa</label>
+                            <input id="empresa" type="text" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <!-- con type="email" en un dispositivo móvil cambia el tipo 
+                                de teclado -->
+                            <input id="email" type="email" class="form-control">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-plus-circle-fill"></i> Registrar Cliente
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
 
     </section>
 
