@@ -736,7 +736,38 @@
     </section>
 
     <section class="seccion">
+        <!-- Bootstrap permite crear barras de navegación de forma muy sencilla con diferentes enlaces.
+            También permite alinearlos y distribuirlos en esa barra de navegación -->
         <h1 class="text-center my-5 heading">Navs</h1>
+
+        <div class="container-xl">
+            <!-- Bootstrap nos obliga a hacer las barras de navegación de esta forma, con ul>li>a y sus clases -->
+            <!-- Lo bueno es que podemos crear menús multinivel (dropdown menu) -->
+            <!-- Como el nav tiene un display de flex podemos usar las utilidades de flexbox para alinear y
+                distribuir el contenido.
+                Por default tenemos justify-content-start, es decir, alineado a la izquierda
+            -->
+            <!-- Cuando es un dispositivo móvil, para mostrar los elementos de arriba hacia abajo podemos usar 
+                flex-column -->
+            <!-- Cuando el dispositivo es mediano (md) mostramos los elementos en una fila -->
+            <ul class="nav flex-column flex-md-row justify-content-evenly">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Inicio</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Nosotros</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tienda Virtual</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                </li>                
+            </ul>
+        </div>
    
     </section>
     
