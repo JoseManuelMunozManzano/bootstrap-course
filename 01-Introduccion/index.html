@@ -552,7 +552,47 @@
     </section>
 
     <section class="seccion">
+        <!-- Un toast es una notificación, como por ejemplo cuando en un sitio web aparece
+            una notificación que dice si deseas chatear con un agente de ventas -->
+        <!-- También para mostrar notificaciones sencillas del tipo usuario registrado o
+            información guardada correctamente o password incorrecto -->
         <h1 class="text-center my-5 heading">Toasts</h1>
+
+        <!-- Muchas veces los toasts se muestran por medio de JavaScript, es decir, algún
+            evento va a suceder y detectando cierto cambio se van a mostrar -->
+        <button type="button" class="btn btn-primary" id="toastBtn">Mostrar Notificación</button>
+
+        <!-- Código del Toast con clases de Bootstrap -->
+        <!-- Ir poniendo y quitando clases para ver como va quedando -->
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 10;">
+            <!-- Con la clase show se mostraría y con hide se oculta -->
+            <div id="toast" class="toast hide">
+                <div class="toast-header">
+                    <!-- Forma larga para realizar el diseño -->
+                    <!-- Con flex y justify-content -->
+                    <!-- <div class="d-flex w-100 justify-content-between">
+                        <strong class="">Email...</strong>
+                        <div>
+                            <small>Hace 3 minutos</small>
+                            <button type="button" class="btn-close"></button>
+                        </div>
+                    </div> -->
+
+                    <!-- Forma corta para realizar el diseño -->
+                    <!-- Con me-auto. me manda el siguiente elemento totalmente a la derecha -->
+                    <strong class="me-auto">Email...</strong>
+                    <small>Hace 3 minutos</small>
+                    <!-- btn-close dibuja una X -->
+                    <!-- data-bs- son atributos que solo funcionan con Bootstrap.
+                        En este caso data-bs-dismiss, aplicado al id toast hace
+                        que el toast se cierre al pulsar la X -->
+                    <button type="button" data-bs-dismiss="toast" class="btn-close"></button>
+                </div>
+                <div class="toast-body">
+                    Has recibido un mensaje
+                </div>
+            </div>
+        </div>
 
     </section>
 
@@ -578,4 +618,21 @@
 
     <!-- Aquí añadimos el script js de Bootstrap -->
     <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.querySelector('#toastBtn').onclick = e => {
+            e.preventDefault();
+
+            // Mostrar el toast
+            const toastEl = document.querySelector('#toast');
+            // Gracias al js de boostrap se puede usar bootstrap de este forma.
+            // Indicamos que ese HTML seleccionado lo tiene que convertir a un Toast.
+            // Probar en la consola del navegador a escribir bootstrap para ver todo
+            // lo que tenemos disponible.
+            const toast = new bootstrap.Toast(toastEl);
+            // Ahora se muestra el toast. Indicar que pasado un cierto tiempo
+            // desaparece automáticamente.
+            toast.show();
+        }
+    </script>
 </html>
