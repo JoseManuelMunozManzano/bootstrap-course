@@ -566,7 +566,14 @@
         <!-- Ir poniendo y quitando clases para ver como va quedando -->
         <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 10;">
             <!-- Con la clase show se mostraría y con hide se oculta -->
-            <div id="toast" class="toast hide">
+            <!-- Se añade role por temas de accesibilidad -->
+            <!-- Se añade aria-live y aria-atomic por temas de accesibilidad. -->
+            <!-- aria-live con valor assertive debe utilizarse cuando hay notificaciones que
+                requieren la atención del usuario. -->
+            <!-- aria-atomic avisa al navegador del dispositivo de navegación asistida que
+                algo cambió. Todos los divs internos formarían un cambio, es decir,
+                hay que tratarlo como una entidad -->
+            <div id="toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="toast-header">
                     <!-- Forma larga para realizar el diseño -->
                     <!-- Con flex y justify-content -->
@@ -580,19 +587,25 @@
 
                     <!-- Forma corta para realizar el diseño -->
                     <!-- Con me-auto. me manda el siguiente elemento totalmente a la derecha -->
-                    <strong class="me-auto">Email...</strong>
+                    <strong class="me-auto">Nuevo Email...</strong>
                     <small>Hace 3 minutos</small>
                     <!-- btn-close dibuja una X -->
                     <!-- data-bs- son atributos que solo funcionan con Bootstrap.
                         En este caso data-bs-dismiss, aplicado al id toast hace
                         que el toast se cierre al pulsar la X -->
-                    <button type="button" data-bs-dismiss="toast" class="btn-close"></button>
+                    <!-- aria-label se informa por motivos de accesibilidad. Permite
+                        especificar un string como la etiqueta de lo que hace el botón -->
+                    <button type="button" data-bs-dismiss="toast" aria-label="Cerrar Notificación" class="btn-close"></button>
                 </div>
                 <div class="toast-body">
                     Has recibido un mensaje
                 </div>
             </div>
         </div>
+
+        <!-- TOAST Y ACCESIBILIDAD -->
+        <!-- https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles -->
+
 
     </section>
 
