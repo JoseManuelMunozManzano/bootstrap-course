@@ -449,6 +449,62 @@
     <section class="seccion">
         <h1 class="text-center my-5 heading">Cards</h1>
 
+        <!-- Este componente funciona mejor si lo colocamos dentro de un grid -->
+        <div class="container-xl">
+            <div class="row">
+                <div class="col-md-4">
+                    <!-- Siempre se inicia con un div con el clase card.
+                        De esta forma va a aplicarse el código CSS para que tenga
+                        una determinada apariencia.  -->
+                    <div class="card mb-3">
+                        <!-- Para hacer la imágenes responsive se usa la clase img-fluid. Pero
+                            en un card se debe usar la clase card-img-top -->
+                        <img class="card-img-top" src="img/curso_1.jpg" alt="Imagen curso">
+
+                        <!-- Estas son otras clases de card que agregan estilos CSS -->
+                        <div class="card-header">
+                            Desde el Header
+                        </div>
+
+                        <div class="card-body">
+                            <h3 class="card-title">Curso de Guitarra</h3>
+                            <p class="card-text">Descripción del curso de guitarra</p>
+                            <!-- Para que el botón tome todo el ancho usar w-100 (width: 100%) 
+                                o d-block (display: block)-->
+                            <a href="#" class="btn btn-primary d-block">Tomar Curso</a>
+                        </div>
+
+                        <div class="card-footer">
+                            Desde el Footer
+                        </div>
+                    </div>
+                </div> <!-- card-md-4 -->
+
+                <div class="col-md-4">
+                    <div class="card mb-3">
+                        <img class="card-img-top" src="img/curso_2.jpg" alt="Imagen curso">
+                        <div class="card-body">
+                            <h3 class="card-title">Curso de Diseño Gráfico</h3>
+                            <p class="card-text">Descripción del curso de diseño</p>
+                            <a href="#" class="btn btn-primary d-block">Tomar Curso</a>
+                        </div>
+                    </div>
+                </div> <!-- card-md-4 -->      
+                
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="img/curso_3.jpg" alt="Imagen curso">
+                        <div class="card-body">
+                            <h3 class="card-title">Curso de Diseño de UX y UI</h3>
+                            <p class="card-text">Descripción del curso de diseño</p>
+                            <a href="#" class="btn btn-primary d-block">Tomar Curso</a>
+                        </div>
+                    </div>
+                </div> <!-- card-md-4 -->                    
+
+            </div>
+        </div>
+
     </section>
 
     <section class="seccion">
