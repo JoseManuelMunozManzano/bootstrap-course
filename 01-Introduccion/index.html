@@ -391,7 +391,35 @@
     <!-- Ver como se añade al final del archivo -->
 
     <section class="seccion">
+        <!-- Un spinner es como una figura que nos dice que se está cargando algo -->
+        <!-- La parte en la que se muestra el spinner y cuando se descarga cierta 
+            información se oculta, se hace con JavaScript, no solo con HTML y CSS -->
         <h1 class="text-center my-5 heading">Spinners</h1>
+
+        <!-- El div se puede dejar vacío, pero por cuestiones de accesibilidad es 
+            importante colocarle algo -->
+        <div class="spinner-border"></div>
+        <!-- Se puede cambiar los colores con las utilidades de texto -->
+        <div class="spinner-border text-primary"></div>
+        <div class="spinner-border text-danger"></div>
+        <div class="spinner-border text-warning"></div>
+        <div class="spinner-border text-light"></div>
+
+        <!-- También existen ciertas utilidades para cambiar su tamaño -->
+        <div class="spinner-border spinner-border-sm"></div>
+
+        <br>
+
+        <!-- Puede controlarse donde va a verse el spinner. Para ello es necesario
+            un div padre con un display flex y donde quieren colocarse los hijos:
+            justify-content-center
+            justify-content-start
+            justify-content-end
+            ...
+         -->
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border text-primary"></div>
+        </div>                
 
     </section>
 
