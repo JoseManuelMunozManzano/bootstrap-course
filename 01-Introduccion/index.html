@@ -754,13 +754,39 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Inicio</a>
                 </li>
+                
+                <!-- Vamos a crear en este item un dropdown menu -->
+                <li class="nav-item">
+                    <!-- Con la clase dropdown-toggle se indica que hay más opciones (aparece una flechita hacia abajo) -->
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Tienda Virtual</a>
+                    <!-- Estará oculto y cuando se presione en Tienda Virtual se va a mostrar -->
+                    <!-- Esto se consigue con el atributo data-bs-toggle de arriba -->
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="#">Categorías</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Nuevos Productos</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Ofertas</a>
+                        </li>
+                    </ul>
+                </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Nosotros</a>
-                </li>
-                
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Tienda Virtual</a>
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Nosotros</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="#">Empresa</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Historia</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Clientes</a>
+                        </li>
+                    </ul>
                 </li>
                 
                 <li class="nav-item">
