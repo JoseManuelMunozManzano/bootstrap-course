@@ -798,7 +798,46 @@
     </section>
     
     <section class="seccion">
+        <!-- Es un menú que sale del lado izquierdo cuando se presiona un botón, por ejemplo -->
+        <!-- Si se pulsa fuera del off-canvas, este se cierra -->
         <h1 class="text-center my-5 heading">Off Canvas</h1>
+
+        <!-- Con el atributo data-bs-toggle se llama a la API offcanvas -->
+        <!-- Para saber que elemento se va a convertir a off canvas se usa el atributo data-bs-target -->
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu">Administrar Perfil</button>
+
+        <!-- Creando el canvas -->
+        <!-- Como mínimo hay que indicar la clase canvas y dónde se va a posicionar: 
+            offcanvas-start, offcanvas-end, offcanvas-top, offcanvas-bottom -->
+        <div id="menu" class="offcanvas offcanvas-start">
+            <div class="offcanvas-header">
+                <h2 class="offcanvas-title">Navegación</h2>
+                <!-- Para cerrar el canvas con un botón se usa el atributo data-bs-dismiss -->
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <h2>Administración</h2>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Información</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Pedidos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Tarjetas</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Notificaciones</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Por ahora no existe en bootstrap una clase offcanvas-footer, aunque se puede agregar 
+                a la hoja de estilos CSS -->
+        </div>
 
     </section>
 
