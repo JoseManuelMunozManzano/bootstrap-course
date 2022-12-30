@@ -397,9 +397,10 @@
         <h1 class="text-center my-5 heading">Spinners</h1>
 
         <!-- El div se puede dejar vacío, pero por cuestiones de accesibilidad es 
-            importante colocarle algo -->
+            importante colocarle algo. Ver más abajo -->
         <div class="spinner-border"></div>
-        <!-- Se puede cambiar los colores con las utilidades de texto -->
+
+        <!-- Se puede cambiar el color de los spinner con las utilidades de texto -->
         <div class="spinner-border text-primary"></div>
         <div class="spinner-border text-danger"></div>
         <div class="spinner-border text-warning"></div>
@@ -419,7 +420,29 @@
          -->
         <div class="d-flex justify-content-center">
             <div class="spinner-border text-primary"></div>
-        </div>                
+        </div>
+
+        <br>
+
+        <!-- BOOTSTRAP Y LA ACCESIBILIDAD -->
+        <!-- Tenemos que seguir los principios de algo que se llama Aria 
+            (Accessible Rich Internet Applications) -->
+        <!-- https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA -->
+        <!-- Aria da los lineamientos para poder escribir HTML para personas ciegas.
+            Un dispositivo dicta el texto a esas personas -->
+        <!-- Se indica el role Aria cuando no queda muy claro que es lo que hace un elemento. 
+            Por ejemplo, no se pone role ni a una imagen ni a un enlace. -->
+        <!-- Con el role status indicamos que la información es importante, pero no
+            hay necesidad de crear un mensaje que esté flotando y diga que se ha 
+            descargado, por ejemplo, usuarios. -->
+        <!-- Se indica también el contenido a leer por el dispositivo de lectura 
+            asistida, en este caso Cargando... 
+            Y para que no se vea Bootstrap nos da una clase llamada visually-hidden, que
+            indica oculta visualmente pero disponible para dispositivos de lectura 
+            asistida. -->
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Cargando...</span>
+        </div>
 
     </section>
 
