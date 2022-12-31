@@ -146,20 +146,11 @@
       <h2 class="text-center py-5">Categorías de Productos</h2>
 
       <div class="row mt-5">
-        <!-- A partir de un tamaño mediano hacia arriba queremos que se comiencen a aplicar
-          estas columnas -->
-        <!-- La clase categoria se reescribirá en CSS para realizar una transición -->
         <div class="col-md-4 categoria">
-          <!-- La idea de esta div es que, cuando la imagen crezca en la transición, oculte 
-            la parte que está creciendo. La imagen crece, pero no sale de su contenedor -->
-          <!-- Esto se hace con un overflow, y Bootstrap da una utilidad para manejar los
-            overflow. -->
           <div class="overflow-hidden">
             <img class="img-fluid" src="img/categoria1.jpg" alt="imagen categoría" />
           </div>
 
-          <!-- text-center por si solo no centra el texto, porque los enlaces tienen un
-            display inline. Se cambia a display block -->
           <a class="text-dark fs-2 text-decoration-none text-center d-block py-3" href="#">Oficina</a>
         </div>
 
@@ -180,6 +171,46 @@
         </div>
       </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="pt-5 mt-5 border-top">
+      <div class="container-xl mt-5">
+        <div class="row">
+          <div class="col-md-4 mb-4 mb-md-0 text-center">
+            <h3 class="mb-4">Categorías</h3>
+            <nav class="d-flex flex-column">
+              <a class="text-dark text-decoration-none" href="#">Cocina</a>
+              <a class="text-dark text-decoration-none" href="#">Oficina</a>
+              <a class="text-dark text-decoration-none" href="#">Jardín</a>
+              <a class="text-dark text-decoration-none" href="#">Cochera</a>
+              <a class="text-dark text-decoration-none" href="#">Dormitorios</a>
+            </nav>
+          </div>
+
+          <div class="col-md-4 mb-4 mb-md-0 text-center">
+            <h3 class="mb-4">Sobre Nosotros</h3>
+            <nav class="d-flex flex-column">
+              <a class="text-dark text-decoration-none" href="#">Nuestra Historia</a>
+              <a class="text-dark text-decoration-none" href="#">Misión, Visión y Valores</a>
+              <a class="text-dark text-decoration-none" href="#">Carreras</a>
+              <a class="text-dark text-decoration-none" href="#">Política de Privacidad</a>
+              <a class="text-dark text-decoration-none" href="#">Términos del Servicio</a>
+            </nav>
+          </div>
+
+          <div class="col-md-4 mb-4 mb-md-0 text-center">
+            <h3 class="mb-4">Soporte</h3>
+            <nav class="d-flex flex-column">
+              <a class="text-dark text-decoration-none" href="#">Preguntas Frecuentes</a>
+              <a class="text-dark text-decoration-none" href="#">Ayuda en Línea</a>
+              <a class="text-dark text-decoration-none" href="#">Confianza y Seguridad</a>
+            </nav>
+          </div>
+        </div>
+
+        <p class="mt-5 text-center fs-2">Todos los derechos reservados. TiendaMuebles</p>
+      </div>
+    </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>
