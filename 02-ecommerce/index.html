@@ -141,6 +141,46 @@
       </div>
     </main>
 
+    <!-- Categorías del Producto -->
+    <section class="container-xl">
+      <h2 class="text-center py-5">Categorías de Productos</h2>
+
+      <div class="row mt-5">
+        <!-- A partir de un tamaño mediano hacia arriba queremos que se comiencen a aplicar
+          estas columnas -->
+        <!-- La clase categoria se reescribirá en CSS para realizar una transición -->
+        <div class="col-md-4 categoria">
+          <!-- La idea de esta div es que, cuando la imagen crezca en la transición, oculte 
+            la parte que está creciendo. La imagen crece, pero no sale de su contenedor -->
+          <!-- Esto se hace con un overflow, y Bootstrap da una utilidad para manejar los
+            overflow. -->
+          <div class="overflow-hidden">
+            <img class="img-fluid" src="img/categoria1.jpg" alt="imagen categoría" />
+          </div>
+
+          <!-- text-center por si solo no centra el texto, porque los enlaces tienen un
+            display inline. Se cambia a display block -->
+          <a class="text-dark fs-2 text-decoration-none text-center d-block py-3" href="#">Oficina</a>
+        </div>
+
+        <div class="col-md-4 categoria">
+          <div class="overflow-hidden">
+            <img class="img-fluid" src="img/categoria2.jpg" alt="imagen categoría" />
+          </div>
+
+          <a class="text-dark fs-2 text-decoration-none text-center d-block py-3" href="#">Hogar</a>
+        </div>
+
+        <div class="col-md-4 categoria">
+          <div class="overflow-hidden">
+            <img class="img-fluid" src="img/categoria3.jpg" alt="imagen categoría" />
+          </div>
+
+          <a class="text-dark fs-2 text-decoration-none text-center d-block py-3" href="#">Cocina</a>
+        </div>
+      </div>
+    </section>
+
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
