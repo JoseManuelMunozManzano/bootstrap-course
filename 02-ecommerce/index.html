@@ -41,11 +41,30 @@
       </div>
     </div>
 
-    <!-- Creando la imagen de fondo -->
-    <!-- Hay un componente de Bootstrap llamado hero. Usualmente tiene una sección que solo
-      es una imagen, pero en Bootstrap tiene textos del lado izquierdo e imágenes de lado 
-      derecho -->
     <div class="hero"></div>
+
+    <!-- Se va a hacer un grid de productos. Es una mezcla entre el card y el grid de Bootstrap -->
+    <main class="container py-5">
+      <h2 class="text-center my-5">Nuestros Productos</h2>
+
+      <!-- Para tener acceso al grid de Bootstrap se usa la clase row -->
+      <!-- Primero dibujamos como queda la distribución -->
+      <div class="row">
+        <div class="col-md-8">imagen aquí</div>
+        <div class="col-md-4">contenido aquí</div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">1</div>
+        <div class="col-md-6">2</div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">1</div>
+        <div class="col-md-4">2</div>
+        <div class="col-md-4">3</div>
+      </div>
+    </main>
 
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>
