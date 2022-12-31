@@ -44,18 +44,17 @@
     <div class="hero"></div>
 
     <!-- Se va a hacer un grid de productos. Es una mezcla entre el card y el grid de Bootstrap -->
-    <main class="container py-5">
+    <!-- Ahora viene la parte de aplicación de CSS para dejar fino el diseño -->
+    <!-- Se indica container-xl para evitar los saltos cuando hacemos el navegador más pequeño/grande -->
+    <main class="container-xl py-5">
       <h2 class="text-center my-5">Nuestros Productos</h2>
 
-      <!-- Para eliminar la separación entre columnas NO REESCRIBIR EL PADDING EN LA CLASE .row PORQUE AFECTA A MUCHAS
-        PARTES DE BOOTSTRAP. Hay una utilidad que nos da Bootstrap para elminar esta separación de columnas, g-0.
-        La separación se llama gutter, y con esta clase se indica que el gutter sea 0 -->
       <div class="row g-0 pt-5">
-        <div class="col-md-8">
+        <!-- Se utiliza la clase producto para hacer un object-fit y poder cortar la imagen a cierta medida -->
+        <!-- Como hay un col-md solo aplicará a un tamaño mediano. Por eso en el CSS se añade un media query  -->
+        <div class="col-md-8 producto">
           <img src="img/producto1.jpg" alt="imagen producto" class="img-fluid" />
         </div>
-        <!-- Para centrarlo verticalmente se usan las clases de flexbox: d-flex flex-column y justify-content-center -->
-        <!-- Si estuviera como row en vez de como columna, para centrar utilizaríamos la clase align-items-center  -->
         <div class="col-md-4 bg-primary text-center p-5 text-white d-flex flex-column justify-content-center">
           <h3>Producto 1</h3>
           <p>
