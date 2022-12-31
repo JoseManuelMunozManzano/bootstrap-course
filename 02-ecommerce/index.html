@@ -47,11 +47,24 @@
     <main class="container py-5">
       <h2 class="text-center my-5">Nuestros Productos</h2>
 
-      <!-- Para tener acceso al grid de Bootstrap se usa la clase row -->
-      <!-- Primero dibujamos como queda la distribución -->
-      <div class="row">
-        <div class="col-md-8">imagen aquí</div>
-        <div class="col-md-4">contenido aquí</div>
+      <!-- Para eliminar la separación entre columnas NO REESCRIBIR EL PADDING EN LA CLASE .row PORQUE AFECTA A MUCHAS
+        PARTES DE BOOTSTRAP. Hay una utilidad que nos da Bootstrap para elminar esta separación de columnas, g-0.
+        La separación se llama gutter, y con esta clase se indica que el gutter sea 0 -->
+      <div class="row g-0 pt-5">
+        <div class="col-md-8">
+          <img src="img/producto1.jpg" alt="imagen producto" class="img-fluid" />
+        </div>
+        <!-- Para centrarlo verticalmente se usan las clases de flexbox: d-flex flex-column y justify-content-center -->
+        <!-- Si estuviera como row en vez de como columna, para centrar utilizaríamos la clase align-items-center  -->
+        <div class="col-md-4 bg-primary text-center p-5 text-white d-flex flex-column justify-content-center">
+          <h3>Producto 1</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem laboriosam nisi perspiciatis quod voluptatem
+            fugit qui expedita
+          </p>
+          <p class="fs-1 fw-bold">$1,000,000.00</p>
+          <a class="btn btn-success fs-3 fw-bold text-uppercase py-3" href="#">Agregar al carrito</a>
+        </div>
       </div>
 
       <div class="row">
