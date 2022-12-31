@@ -80,7 +80,7 @@ h3 {
 /** Productos  */
 @media (min-width: 768px) {
   .producto img {
-    height: 43rem;
+    height: 45rem;
     width: 100%;
     object-fit: cover;
   }
