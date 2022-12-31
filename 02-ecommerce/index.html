@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ecommerce</title>
 
-    <!-- De Google Fonts. Los links a las fuentes de texto se ponen antes 
-        que el link a Bootstrap -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,6 +20,23 @@
     <header class="py-5">
       <h1 class="text-center">Tienda <span class="text-primary">Muebles</span></h1>
     </header>
+
+    <!-- navbar-nav crea una barra de navegación y aplica estilos para que los enlaces se vean
+      de arriba a abajo -->
+    <!-- Con la clase container se centra un poco más -->
+    <!-- Con text center se centra el contenido -->
+    <!-- Pero para dispositivos más grandes (md) con d-flex y flex-md-row cambiamos 
+      la dirección de columna a fila. Y para que se vean los enlaces separados se agrega
+      la clase justify-content-md-between (se indica md para que solo actúe con md) -->
+    <nav class="navbar-nav container d-flex flex-md-row justify-content-md-between text-center">
+      <!-- Para que los enlaces no aparezcan azules ni con el subrayado -->
+      <a class="text-dark text-decoration-none" href="#">Inicio</a>
+      <a class="text-dark text-decoration-none" href="#">Nosotros</a>
+      <a class="text-dark text-decoration-none" href="#">Tienda</a>
+      <a class="text-dark text-decoration-none" href="#">Blog</a>
+      <a class="text-dark text-decoration-none" href="#">Galería</a>
+      <a class="text-dark text-decoration-none" href="#">Contacto</a>
+    </nav>
 
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>
