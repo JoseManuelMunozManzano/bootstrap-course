@@ -82,10 +82,6 @@ h3 {
   .producto img {
     height: 43rem;
     width: 100%;
-    /* Sin object-fit la imagen se estira porque estamos obligando a la imagen a tomar el 100% de ancho pero su altura
-      la estamos limitando a 43rem */
-    /* Con object-fit estamos diciendo que tome los 43rem de altura pero que no pierda la proporción y llena todo el
-      espacio disponible */
     object-fit: cover;
   }
 }
