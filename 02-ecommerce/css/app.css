@@ -32,3 +32,22 @@ h1 {
 .nombre-sitio {
   color: var(--bs-blue) !important;
 }
+
+.hero {
+  background-image: url(../img/principal.jpg);
+  /* Para que se vea la imagen le damos un tamaño al div */
+  height: 25rem;
+  /* Para que llene todo el espacio disponible */
+  background-size: cover;
+  /* Para que la imagen crezca desde el centro y no se pierda de vista el mueble */
+  background-position: center center;
+  /* Gracias a background-size: cover; la imagen no debería repetirse */
+  /* background-repeat: no-repeat; */
+}
+
+/* Para tamaño de tablet y más grandes */
+@media (min-width: 768px) {
+  .hero {
+    height: 55rem;
+  }
+}
