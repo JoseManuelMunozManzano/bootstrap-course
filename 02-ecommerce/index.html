@@ -21,22 +21,33 @@
       <h1 class="text-center">Tienda <span class="text-primary">Muebles</span></h1>
     </header>
 
-    <!-- navbar-nav crea una barra de navegación y aplica estilos para que los enlaces se vean
-      de arriba a abajo -->
-    <!-- Con la clase container se centra un poco más -->
-    <!-- Con text center se centra el contenido -->
-    <!-- Pero para dispositivos más grandes (md) con d-flex y flex-md-row cambiamos 
-      la dirección de columna a fila. Y para que se vean los enlaces separados se agrega
-      la clase justify-content-md-between (se indica md para que solo actúe con md) -->
-    <nav class="navbar-nav container d-flex flex-md-row justify-content-md-between text-center">
-      <!-- Para que los enlaces no aparezcan azules ni con el subrayado -->
-      <a class="text-dark text-decoration-none" href="#">Inicio</a>
-      <a class="text-dark text-decoration-none" href="#">Nosotros</a>
-      <a class="text-dark text-decoration-none" href="#">Tienda</a>
-      <a class="text-dark text-decoration-none" href="#">Blog</a>
-      <a class="text-dark text-decoration-none" href="#">Galería</a>
-      <a class="text-dark text-decoration-none" href="#">Contacto</a>
-    </nav>
+    <!-- Creando el icono de hamburguesa para mostrar la barra de navegación. 
+        To-do se puede hacer con Bootstrap. No hace falta CSS -->
+    <!-- Contenedor principal con el border -->
+    <div class="border-top py-4">
+      <!-- Div que oculta/muestra la barra de navegación -->
+      <div class="navbar navbar-expand-lg container navbar-light">
+        <!-- d-lg-none indica que para dispositivos grandes su display es none, NO SE VE -->
+        <!-- nombre-sitio es la única clase que usa CSS y es para poner el color azul al texto -->
+        <a class="navbar-brand nombre-sitio d-lg-none fs-2 fw-bold text-uppercase" href="index.html">Tienda Muebles</a>
+        <!-- El botón usa la API de Bootstrap Collapse en el elemento con id navegacion -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegacion">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Indicamos el id navegacion y las clases con lo que queremos que ocurra -->
+        <div id="navegacion" class="collapse navbar-collapse">
+          <nav class="navbar-nav container d-flex flex-md-row justify-content-md-between text-center">
+            <a class="text-dark text-decoration-none" href="#">Inicio</a>
+            <a class="text-dark text-decoration-none" href="#">Nosotros</a>
+            <a class="text-dark text-decoration-none" href="#">Tienda</a>
+            <a class="text-dark text-decoration-none" href="#">Blog</a>
+            <a class="text-dark text-decoration-none" href="#">Galería</a>
+            <a class="text-dark text-decoration-none" href="#">Contacto</a>
+          </nav>
+        </div>
+      </div>
+    </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>

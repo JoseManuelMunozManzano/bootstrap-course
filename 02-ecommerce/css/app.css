@@ -1,7 +1,3 @@
-/* Reescribiendo custom properties de Bootstrap */
-/* Para ver estos custom properties, ir a las herramientas para desarrolladores (F12), 
-pestaña Elements, seleccionar la palabra muebles, seleccionar la pestaña Styles y buscar 
-por el final :root */
 :root {
   --bs-blue: #037bc0;
 }
@@ -13,7 +9,7 @@ html {
 body {
   font-family: 'Raleway', sans-serif;
   font-size: 1.6rem;
-  line-height: 2; /* interlineado */
+  line-height: 2;
 }
 
 h1,
@@ -32,19 +28,7 @@ h1 {
   }
 }
 
-/* Reescribir colores */
-/* El problema del !important al reescribir estilos Bootstrap */
-
-/* Esto no reescribe el estilo porque la versión compilada de Bootstrap no utiliza directamente 
-los custom properties, pero sobre todo utilizan !important, con lo que la especificidad es la 
-más alta */
-header span {
-  color: var(--bs-blue);
-}
-
-/* Para reescribir el estilo, por tanto, cogemos la clase de Bootstrap, le ponemos el estilo
-deseado y le indicamos !important */
-/* Al poner solo la clase Bootstrap, sin ids u otros elementos, se puede usar en más lugares */
-.text-primary {
+.text-primary,
+.nombre-sitio {
   color: var(--bs-blue) !important;
 }
