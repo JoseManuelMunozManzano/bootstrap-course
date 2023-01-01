@@ -41,14 +41,101 @@
       </div>
     </div>
 
-    <!-- Como no se puede poner un section y un aside en un main, ya que no se sabe cual
-      es el contenido principal, se cambia la etiqueta main por section -->
     <section class="container-xl py-5">
       <h2 class="text-center my-5">Blog</h2>
 
-      <div class="row mg-5 gx-5">
-        <!-- Y aquí se indica el main -->
-        <main class="col-md-8">1</main>
+      <div class="row mt-5 gx-5">
+        <!-- Para dispositivos móviles -->
+        <!-- Este order-1 indica que forzamos a que el main se vea en el lado derecho -->
+        <!-- Con order-0 se vería el main del lado izquierdo (valor por defecto) -->
+        <!-- Si hay más order, el menor número se muestra primero -->
+
+        <!-- Para dispositivos más grandes -->
+        <!-- Se indica order-md-0 para que vuelva a verse primero el main y luego el aside -->
+
+        <!-- Para poder usar la clase order debemos tener un display de flex. Esto ya lo 
+          tiene la clase row de arriba -->
+        <main class="col-md-8 order-1 order-md-0">
+          <!-- Las entradas de blog siempre deben estar en un article -->
+          <article class="mb-2 pb-5">
+            <h2 class="my-5">Guía de Colores</h2>
+            <img src="img/nosotros.jpg" alt="imagen blog" class="img-fluid" />
+
+            <!-- flex-column se añade porque en dispositivos pequeños queremos que los párrafos
+              se pongan uno debajo del otro -->
+            <!-- Pero en dispositivos medianos y más grandes queremos que se vean en la misma
+              fila y de ahí flex-md-row -->
+            <div class="d-flex flex-column flex-md-row justify-content-md-between py-4">
+              <p class="fw-bold">
+                Fecha
+                <span class="text-primary">22 de octubre de 2022</span>
+              </p>
+              <p class="fw-bold">
+                Escrito por:
+                <span class="text-primary">TiendaMuebles</span>
+              </p>
+            </div>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, explicabo. Omnis aut reprehenderit
+              impedit veritatis nihil molestias adipisci quaerat, porro maxime velit, consequatur perferendis!
+              Asperiores impedit voluptatem quos fugit reiciendis?
+            </p>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, odio? Beatae, voluptate? Exercitationem
+              ratione corporis odio minus labore delectus sapiente, recusandae blanditiis, quis sed commodi optio ut
+              adipisci quibusdam nostrum.
+            </p>
+
+            <!-- Se han usado las clases px-5 py-3 y fs-3 para diseñar el botón a nuestro gusto -->
+            <!-- Los botones en Bootstrap por defecto tienen las esquinas redondeadas. Para 
+              eliminarlas Bootstrap nos ofrece la clase rounded-0 
+              Sirven para cualquier elemento -->
+            <!-- En un dispositivo de pantalla pequeño, para que tome el botón todo el ancho
+              se usa la clase d-block. Para que no afecte a pantallas más grandes se incluye
+              la clase d-md-inline -->
+            <a
+              href="entrada.html"
+              class="btn btn-success px-5 py-3 fs-3 text-uppercase fw-bold rounded-0 d-block d-md-inline"
+              >Continuar Leyendo</a
+            >
+          </article>
+
+          <article class="mb-2 border-top pb-5">
+            <h2 class="my-5">Guía de Colores</h2>
+            <img src="img/nosotros.jpg" alt="imagen blog" class="img-fluid" />
+
+            <div class="d-flex flex-column flex-md-row justify-content-md-between py-4">
+              <p class="fw-bold">
+                Fecha
+                <span class="text-primary">22 de octubre de 2022</span>
+              </p>
+              <p class="fw-bold">
+                Escrito por:
+                <span class="text-primary">TiendaMuebles</span>
+              </p>
+            </div>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, explicabo. Omnis aut reprehenderit
+              impedit veritatis nihil molestias adipisci quaerat, porro maxime velit, consequatur perferendis!
+              Asperiores impedit voluptatem quos fugit reiciendis?
+            </p>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, odio? Beatae, voluptate? Exercitationem
+              ratione corporis odio minus labore delectus sapiente, recusandae blanditiis, quis sed commodi optio ut
+              adipisci quibusdam nostrum.
+            </p>
+
+            <a
+              href="entrada.html"
+              class="btn btn-success px-5 py-3 fs-3 text-uppercase fw-bold rounded-0 d-block d-md-inline"
+              >Continuar Leyendo</a
+            >
+          </article>
+        </main>
 
         <aside class="col-md-4">
           <h3 class="my-5">Otras Entradas del Blog</h3>
