@@ -8,10 +8,25 @@
 const modalImagen = document.querySelector('#modal-imagen');
 
 modalImagen.addEventListener('show.bs.modal', function (event) {
-  // Para saber a qué imagen hemos dado click
-  console.log(event.relatedTarget);
   const enlace = event.relatedTarget;
   const rutaImagen = enlace.getAttribute('data-bs-imagen');
 
-  console.log(rutaImagen);
+  // Construir la imagen
+  // Los elementos usualmente se van a crear con la etiqueta en mayúsculas
+  const imagen = document.createElement('IMG');
+  imagen.src = `img/${rutaImagen}.jpg`;
+  imagen.classList.add('img-fluid');
+  imagen.alt = 'Imagen Galería';
+
+  // Quiero mostrar la imagen en la clase modal-body
+  const contenidoModal = document.querySelector('.modal-body');
+  contenidoModal.appendChild(imagen);
+
+  // console.log(imagen);
+});
+
+// Cuando se cierra el modal quito la imagen del Modal
+modalImagen.addEventListener('hidden.bs.modal', function () {
+  const contenidoModal = document.querySelector('.modal-body');
+  contenidoModal.textContent = '';
 });
