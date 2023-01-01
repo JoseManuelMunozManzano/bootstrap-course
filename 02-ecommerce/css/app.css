@@ -94,3 +94,18 @@ h3 {
 .categoria img:hover {
   transform: scale(1.2);
 }
+
+/* Aplicar a todos excepto al último li un margin */
+.galeria li:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+/* Otra forma de hacerlo
+.galeria li {
+  margin-bottom: 1rem;
+}
+
+  Para quitar el margen del último li 
+.galeria li:last-of-type {
+  margin-bottom: 0;
+} */
