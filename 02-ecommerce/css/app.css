@@ -100,12 +100,7 @@ h3 {
   margin-bottom: 1rem;
 }
 
-/* Otra forma de hacerlo
-.galeria li {
-  margin-bottom: 1rem;
+.form-control {
+  padding: 1rem;
+  font-size: 1.6rem;
 }
-
-  Para quitar el margen del último li 
-.galeria li:last-of-type {
-  margin-bottom: 0;
-} */
