@@ -46,57 +46,74 @@
 
       <ul class="row list-unstyled galeria">
         <li class="col-md-6 col-lg-4">
-          <!-- No tiene href porque el enlace va a ser llamado por medio 
-            de atributos de Bootstrap -->
-          <!-- Con data-bs-toggle indicamos que API de Bootstrap queremos usar y con
-            data-bs-target indicamos en qué parte va a encontrar el HTML para mostrar
-            el modal -->
-          <a data-bs-toggle="modal" data-bs-target="#modal-imagen-1">
+          <!-- Llamando al modal -->
+          <!-- data-bs-imagen es un atributo personalizado nuestro, no de Bootstrap.
+            Con el queremos indicar qué imagen se tiene que cargar en JavaScript al hacer click -->
+          <a data-bs-toggle="modal" data-bs-target="#modal-imagen" data-bs-imagen="galeria_01">
             <img src="img/galeria_01.jpg" alt="imagen galeria" class="img-fluid" />
           </a>
         </li>
 
+        <!-- Aquí habría que hacer lo mismo para llamar al modal. Y abajo, 
+          donde está definido el modal, habría que duplicar código para cada imagen.
+          Para evitar eso, lo vamos a hacer con JavaScript -->
         <li class="col-md-6 col-lg-4">
-          <img src="img/galeria_02.jpg" alt="imagen galeria" class="img-fluid" />
+          <a data-bs-toggle="modal" data-bs-target="#modal-imagen" data-bs-imagen="galeria_02">
+            <img src="img/galeria_02.jpg" alt="imagen galeria" class="img-fluid" />
+          </a>
         </li>
 
         <li class="col-md-6 col-lg-4">
-          <img src="img/galeria_03.jpg" alt="imagen galeria" class="img-fluid" />
+          <a data-bs-toggle="modal" data-bs-target="#modal-imagen" data-bs-imagen="galeria_03">
+            <img src="img/galeria_03.jpg" alt="imagen galeria" class="img-fluid" />
+          </a>
         </li>
 
         <li class="col-md-6 col-lg-4">
-          <img src="img/galeria_04.jpg" alt="imagen galeria" class="img-fluid" />
+          <a data-bs-toggle="modal" data-bs-target="#modal-imagen" data-bs-imagen="galeria_04">
+            <img src="img/galeria_04.jpg" alt="imagen galeria" class="img-fluid" />
+          </a>
         </li>
 
         <li class="col-md-6 col-lg-4">
-          <img src="img/galeria_05.jpg" alt="imagen galeria" class="img-fluid" />
+          <a data-bs-toggle="modal" data-bs-target="#modal-imagen" data-bs-imagen="galeria_05">
+            <img src="img/galeria_05.jpg" alt="imagen galeria" class="img-fluid" />
+          </a>
         </li>
 
         <li class="col-md-6 col-lg-4">
-          <img src="img/galeria_06.jpg" alt="imagen galeria" class="img-fluid" />
+          <a data-bs-toggle="modal" data-bs-target="#modal-imagen" data-bs-imagen="galeria_06">
+            <img src="img/galeria_06.jpg" alt="imagen galeria" class="img-fluid" />
+          </a>
         </li>
 
         <li class="col-md-6 col-lg-4">
-          <img src="img/galeria_07.jpg" alt="imagen galeria" class="img-fluid" />
+          <a data-bs-toggle="modal" data-bs-target="#modal-imagen" data-bs-imagen="galeria_07">
+            <img src="img/galeria_07.jpg" alt="imagen galeria" class="img-fluid" />
+          </a>
         </li>
 
         <li class="col-md-6 col-lg-4">
-          <img src="img/galeria_08.jpg" alt="imagen galeria" class="img-fluid" />
+          <a data-bs-toggle="modal" data-bs-target="#modal-imagen" data-bs-imagen="galeria_08">
+            <img src="img/galeria_08.jpg" alt="imagen galeria" class="img-fluid" />
+          </a>
         </li>
 
         <li class="col-md-6 col-lg-4">
-          <img src="img/galeria_09.jpg" alt="imagen galeria" class="img-fluid" />
+          <a data-bs-toggle="modal" data-bs-target="#modal-imagen" data-bs-imagen="galeria_09">
+            <img src="img/galeria_09.jpg" alt="imagen galeria" class="img-fluid" />
+          </a>
         </li>
       </ul>
     </main>
 
     <!-- MODAL -->
-    <div class="modal fade" id="modal-imagen-1">
+    <!-- Se deja general y con JavaScript inyectaremos el código que haga falta
+      detectando a qué imagen le dio click el usuario -->
+    <div class="modal fade" id="modal-imagen">
       <div class="modal-dialog modal-lg modal-dialog-center">
         <div class="modal-content">
-          <div class="modal-body">
-            <img src="img/galeria_01.jpg" alt="imagen galeria" class="img-fluid" />
-          </div>
+          <div class="modal-body"></div>
         </div>
       </div>
     </div>
@@ -142,5 +159,6 @@
     </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
