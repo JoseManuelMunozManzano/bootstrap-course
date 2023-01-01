@@ -44,19 +44,16 @@
     <main class="container-xl py-5">
       <h2 class="text-center my-5">Galería</h2>
 
-      <!-- En un dispositivo pequeño se muestra una imagen por columna -->
-      <!-- En un dispositivo mediano se muestran dos imagenes por columna -->
-      <!-- En un dispositivo largo se muestran tres imagenes por columna -->
-
-      <!-- El ul añade una viñeta y un poco de padding. Para removerlo se usa la clase
-        list-unstyled -->
-
-      <!-- Con la clase galeria personalizamos usando CSS. Se hace para evitar meter una
-        clase más en cada li, para no sobrecargarlo de clases, y como ejemplo de 
-        personalización  -->
       <ul class="row list-unstyled galeria">
         <li class="col-md-6 col-lg-4">
-          <img src="img/galeria_01.jpg" alt="imagen galeria" class="img-fluid" />
+          <!-- No tiene href porque el enlace va a ser llamado por medio 
+            de atributos de Bootstrap -->
+          <!-- Con data-bs-toggle indicamos que API de Bootstrap queremos usar y con
+            data-bs-target indicamos en qué parte va a encontrar el HTML para mostrar
+            el modal -->
+          <a data-bs-toggle="modal" data-bs-target="#modal-imagen-1">
+            <img src="img/galeria_01.jpg" alt="imagen galeria" class="img-fluid" />
+          </a>
         </li>
 
         <li class="col-md-6 col-lg-4">
@@ -92,6 +89,17 @@
         </li>
       </ul>
     </main>
+
+    <!-- MODAL -->
+    <div class="modal fade" id="modal-imagen-1">
+      <div class="modal-dialog modal-lg modal-dialog-center">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="img/galeria_01.jpg" alt="imagen galeria" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer class="pt-5 mt-5 border-top">
